@@ -19,7 +19,7 @@ const (
 // return lookupds due to different category
 func GetLookupdAddrs(ctx *sj.Json) ([]string, error) {
 	var lookupdAddrs []string
-	lookupdConf := ctx.Get("main").Get("nsq").Get("lookupd_conf").MustString("/home/s/data/nsqlog/nsq.json")
+	lookupdConf := ctx.Get("main").Get("nsq").Get("lookupd_conf").MustString("/tmp/data/nsqlog/nsq.json")
 	category := ctx.Get("main").Get("nsq").Get("lookupd_category").MustInt(0)
 	idc := ctx.Get("main").Get("nsq").Get("idc_specified").MustString()
 

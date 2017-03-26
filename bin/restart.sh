@@ -4,4 +4,4 @@ if [ $# -ne 1 ]; then
     exit 0
 fi
 
-kill `cat /home/s/data/nsq_vcr/${1}.pid`
+kill `cat /tmp/data/nsq_vcr/${1}.pid`
