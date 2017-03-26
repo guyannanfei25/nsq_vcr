@@ -1,0 +1,2 @@
+* * * * * cloud /usr/bin/lockf -t 0 /home/s/data/nsq_vcr/record.lock /bin/bash /home/s/nsq_vcr/bin/monitor.sh record &> /dev/null
+* * * * * cloud /bin/bash /home/s/nsq_vcr/bin/clean_files.sh &> /dev/null

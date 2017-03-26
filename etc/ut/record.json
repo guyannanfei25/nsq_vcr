@@ -1,0 +1,42 @@
+{
+  "main": {
+    "pid_file": "/tmp/data/nsq_vcr/record.pid",
+    "tick_sec": 20,
+
+    "nsq": {
+      "lookupd_conf": "/tmp/data/nsq_vcr/nsq.json",
+      "lookupd_category": 2,
+      "idc_specified": "default_idc",
+      "backup_topics": [
+        "test"
+      ],
+      "channel": "backup",
+      "max-in-flight":20,
+      "timeout_sec": 3
+    },
+
+    "write_dirs": [
+      "/tmp/data"
+    ],
+    "is_gz": true,
+    "time-pattern": "2006-01-02-15-04-05.000",
+    "max-block-per-file": -1,
+    "max-size-per-file-m": 300,
+    "max-time-rolling-minute": 60,
+    "file_name_pattern": "/write_dirs/topic/channel/backup.log.time-pattern_msg-num.gz",
+
+    "useless_tail": 0
+  },
+  "log":{
+    "log_dir": "/tmp/data/nsq_vcr/",
+    "log_name": "record.log",
+    "log_level": 0
+  },
+  "gc":{
+    "max_mem_m": 700,
+    "check_interval_s": 20
+  },
+  "runtime":{
+    "max_proc": -1
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "main": {
+    "pid_file": "/tmp/data/nsq_vcr/play.pid",
+    "tick_sec": 20,
+
+    "nsq": {
+      "nsqd_addrs": [
+        "127.0.0.1:4150"
+      ],
+      "channel": "backup",
+      "max-in-flight":20,
+      "timeout_sec": 3
+    },
+
+    "monitor_info": [
+      {
+        "topic": "test",
+        "monitor_dirs": [
+        "/tmp/data/test/"
+        ]
+      }
+    ],
+    "is_gz": true,
+    "time-pattern": "2006-01-02-15-04-05.000",
+    "max-block-per-file": -1,
+    "max-size-per-file-m": 300,
+    "max-time-rolling-minute": 60,
+    "file_name_pattern": "/write_dirs/topic/channel/backup.log.time-pattern_msg-num.gz",
+
+    "useless_tail": 0
+  },
+  "log":{
+    "log_dir": "/tmp/data/nsq_vcr/",
+    "log_name": "play.log",
+    "log_level": 1
+  },
+  "gc":{
+    "max_mem_m": 700,
+    "check_interval_s": 20
+  },
+  "runtime":{
+    "max_proc": -1
+  }
+}

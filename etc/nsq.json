@@ -1,0 +1,10 @@
+{
+ "nsqloopupd_address":{
+  "global":[
+   "your.global.lookupd.addrs:4161"
+  ],
+  "default_idc":[
+    "127.0.0.1:4161"
+  ]
+ }
+}
